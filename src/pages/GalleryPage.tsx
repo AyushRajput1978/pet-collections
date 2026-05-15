@@ -67,8 +67,8 @@ export function GalleryPage() {
             through detail pages.
           </p>
         </HeroText>
-        <SelectionSummary />
       </Hero>
+      <SelectionSummary />
 
       <GalleryControls
         query={collection.query}
@@ -104,8 +104,8 @@ export function GalleryPage() {
             ))}
           </Grid>
 
-          {collection.hasMore ? (
-            <LoadMore>
+          <LoadMore>
+            {collection.hasMore ? (
               <Button
                 type="button"
                 $variant="primary"
@@ -113,8 +113,8 @@ export function GalleryPage() {
               >
                 Load More Pets
               </Button>
-            </LoadMore>
-          ) : null}
+            ) : null}
+          </LoadMore>
         </>
       )}
     </>

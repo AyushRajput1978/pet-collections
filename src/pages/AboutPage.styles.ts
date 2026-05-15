@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const About = styled.section`
   display: grid;
@@ -6,17 +6,15 @@ export const About = styled.section`
 `;
 
 export const Intro = styled.header`
-  max-width: 820px;
-
   span {
-    color: var(--coral);
+    color: var(--teal);
     font-size: 0.78rem;
     font-weight: 900;
     text-transform: uppercase;
   }
 
   h1 {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     line-height: 0.97;
     margin: 0.4rem 0 0.8rem;
 
@@ -25,7 +23,7 @@ export const Intro = styled.header`
     }
 
     @media (min-width: 1080px) {
-      font-size: 4.8rem;
+      font-size: 4.2rem;
     }
   }
 

@@ -85,7 +85,7 @@ export const Content = styled.div`
   p {
     color: rgba(255, 255, 255, 0.82);
     display: -webkit-box;
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     line-height: 1.35;
     overflow: hidden;
     -webkit-line-clamp: 2;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Page = styled.section`
   display: grid;
@@ -19,7 +19,7 @@ export const Header = styled.header`
     margin: 0.25rem 0 0;
 
     @media (min-width: 760px) {
-      font-size: 3.2rem;
+      font-size: 3.4rem;
     }
 
     @media (min-width: 1080px) {
@@ -37,8 +37,11 @@ export const Grid = styled.section`
     gap: 1.5rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   @media (min-width: 1040px) {
+    gap: 1.65rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @media (min-width: 1290px) {
     gap: 1.65rem;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }

@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 export const Detail = styled.section`
   display: grid;
@@ -62,11 +62,11 @@ export const Profile = styled.article`
     line-height: 0.95;
 
     @media (min-width: 760px) {
-      font-size: 3.3rem;
+      font-size: 3.4rem;
     }
 
     @media (min-width: 1080px) {
-      font-size: 4.6rem;
+      font-size: 4.2rem;
     }
   }
 

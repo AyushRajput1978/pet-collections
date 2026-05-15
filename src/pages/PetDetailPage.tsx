@@ -1,11 +1,11 @@
-import { ArrowLeft, Check, Download, Plus } from 'lucide-react';
-import { useParams } from 'react-router-dom';
-import { Button } from '../components/Button';
-import { EmptyState } from '../components/EmptyState';
-import { usePets } from '../hooks/usePets';
-import { useSelection } from '../state/SelectionContext';
-import { downloadPets } from '../utils/download';
-import { formatBytes, formatDate } from '../utils/formatters';
+import { ArrowLeft, Check, Download, Plus } from "lucide-react";
+import { useParams } from "react-router-dom";
+import { Button } from "../components/Button";
+import { EmptyState } from "../components/EmptyState";
+import { usePets } from "../hooks/usePets";
+import { useSelection } from "../state/SelectionContext";
+import { downloadPets } from "../utils/download";
+import { formatBytes, formatDate } from "../utils/formatters";
 import {
   ActionRow,
   BackLink,
@@ -16,7 +16,7 @@ import {
   Kicker,
   PhotoPanel,
   Profile,
-} from './PetDetailPage.styles';
+} from "./PetDetailPage.styles";
 
 export function PetDetailPage() {
   const { id } = useParams();
@@ -25,7 +25,12 @@ export function PetDetailPage() {
   const pet = pets.find((candidate) => candidate.id === id);
 
   if (loading) {
-    return <EmptyState title="Loading pet" message="Fetching this companion's profile..." />;
+    return (
+      <EmptyState
+        title="Loading pet"
+        message="Fetching this companion's profile..."
+      />
+    );
   }
 
   if (error) {
@@ -79,9 +84,13 @@ export function PetDetailPage() {
           </FactGrid>
 
           <ActionRow>
-            <Button type="button" $variant="primary" onClick={() => toggleSelection(pet)}>
+            <Button
+              type="button"
+              $variant="primary"
+              onClick={() => toggleSelection(pet)}
+            >
               {selected ? <Check size={18} /> : <Plus size={18} />}
-              {selected ? 'Selected' : 'Select'}
+              {selected ? "Selected" : "Select"}
             </Button>
             <Button type="button" onClick={() => downloadPets([pet])}>
               <Download size={18} />

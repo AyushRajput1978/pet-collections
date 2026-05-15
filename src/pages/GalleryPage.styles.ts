@@ -1,21 +1,10 @@
 import styled from "styled-components";
 
 export const Hero = styled.section`
-  align-items: end;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: minmax(0, 1fr) minmax(22rem, 30rem);
   margin-bottom: 1rem;
-
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-  }
 `;
 
 export const HeroText = styled.div`
-  display: grid;
-  gap: 0.55rem;
-
   span {
     color: var(--teal);
     font-size: 0.78rem;
@@ -27,15 +16,13 @@ export const HeroText = styled.div`
   h1 {
     font-size: 2.2rem;
     line-height: 0.95;
-    margin: 0;
-    max-width: 780px;
-
+    margin: 0.55rem 0;
     @media (min-width: 760px) {
       font-size: 3.4rem;
     }
 
     @media (min-width: 1080px) {
-      font-size: 4.8rem;
+      font-size: 4.2rem;
     }
   }
 
@@ -74,6 +61,13 @@ export const LoadMore = styled.div`
   display: flex;
   justify-content: center;
   padding: 1.5rem 0 0;
+  p {
+    color: var(--muted);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 560px;
+  }
 `;
 
 export const Centered = styled.div`
