@@ -1,0 +1,98 @@
+[
+  {
+    "id": "miso",
+    "title": "Miso",
+    "description": "A bright-eyed tabby who treats every cardboard box like a luxury apartment.",
+    "imageUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-04-24T12:30:00.000Z",
+    "fileSize": 420000
+  },
+  {
+    "id": "juniper",
+    "title": "Juniper",
+    "description": "A trail-loving rescue pup with a heroic commitment to tennis balls.",
+    "imageUrl": "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-05-01T09:15:00.000Z",
+    "fileSize": 510000
+  },
+  {
+    "id": "pepper",
+    "title": "Pepper",
+    "description": "A tiny rabbit with excellent posture and a weakness for basil.",
+    "imageUrl": "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-03-18T18:45:00.000Z",
+    "fileSize": 360000
+  },
+  {
+    "id": "atlas",
+    "title": "Atlas",
+    "description": "A golden retriever puppy with serious nap credentials and sunny manners.",
+    "imageUrl": "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-05-08T10:00:00.000Z",
+    "fileSize": 575000
+  },
+  {
+    "id": "pickle",
+    "title": "Pickle",
+    "description": "A curious parakeet who supervises breakfast from the safest shoulder.",
+    "imageUrl": "https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-02-06T14:10:00.000Z",
+    "fileSize": 335000
+  },
+  {
+    "id": "olive",
+    "title": "Olive",
+    "description": "A sleepy spaniel with velvet ears and an encyclopedic knowledge of blankets.",
+    "imageUrl": "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-01-29T08:20:00.000Z",
+    "fileSize": 485000
+  },
+  {
+    "id": "chai",
+    "title": "Chai",
+    "description": "A dignified kitten who believes windowsills are observatories.",
+    "imageUrl": "https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-04-11T16:05:00.000Z",
+    "fileSize": 455000
+  },
+  {
+    "id": "biscuit",
+    "title": "Biscuit",
+    "description": "A cheerful corgi with a fast trot and a dramatic relationship with stairs.",
+    "imageUrl": "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-05-05T11:45:00.000Z",
+    "fileSize": 540000
+  },
+  {
+    "id": "maple",
+    "title": "Maple",
+    "description": "A gentle guinea pig who considers parsley a major life event.",
+    "imageUrl": "https://images.unsplash.com/photo-1612267168669-679c961c5f42?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-03-02T13:35:00.000Z",
+    "fileSize": 310000
+  },
+  {
+    "id": "nova",
+    "title": "Nova",
+    "description": "A husky mix with glacier-blue eyes and a schedule full of opinions.",
+    "imageUrl": "https://images.unsplash.com/photo-1605568427561-40dd23c2acea?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-04-30T19:25:00.000Z",
+    "fileSize": 605000
+  },
+  {
+    "id": "fig",
+    "title": "Fig",
+    "description": "A calm tortoise who brings ancient wisdom to patio afternoons.",
+    "imageUrl": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-02-21T07:55:00.000Z",
+    "fileSize": 390000
+  },
+  {
+    "id": "luna",
+    "title": "Luna",
+    "description": "A silver cat with moonlit fur and a fondness for quiet corners.",
+    "imageUrl": "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-05-10T17:40:00.000Z",
+    "fileSize": 470000
+  }
+]
