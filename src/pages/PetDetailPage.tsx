@@ -1,7 +1,9 @@
 import { ArrowLeft, Check, Download, Plus } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { Button } from "../components/Button";
+import { DetailPhoto } from "../components/DetailPhoto";
 import { EmptyState } from "../components/EmptyState";
+import { FactCard } from "../components/FactCard";
 import { usePets } from "../hooks/usePets";
 import { useSelection } from "../state/SelectionContext";
 import { downloadPets } from "../utils/download";
@@ -11,10 +13,8 @@ import {
   BackLink,
   Detail,
   DetailGrid,
-  Fact,
   FactGrid,
   Kicker,
-  PhotoPanel,
   Profile,
 } from "./PetDetailPage.styles";
 
@@ -63,10 +63,7 @@ export function PetDetailPage() {
       </BackLink>
 
       <DetailGrid>
-        <PhotoPanel>
-          <img src={pet.imageUrl} alt="" aria-hidden="true" />
-          <img src={pet.imageUrl} alt={pet.title} />
-        </PhotoPanel>
+        <DetailPhoto src={pet.imageUrl} alt={pet.title} />
 
         <Profile>
           <Kicker>{formatDate(pet.createdAt)}</Kicker>
@@ -74,14 +71,8 @@ export function PetDetailPage() {
           <p>{pet.description}</p>
 
           <FactGrid>
-            <Fact>
-              <span>Estimated file size</span>
-              <strong>{formatBytes(pet.fileSize)}</strong>
-            </Fact>
-            <Fact>
-              <span>Gallery id</span>
-              <strong>{pet.id}</strong>
-            </Fact>
+            <FactCard label="Estimated file size" value={formatBytes(pet.fileSize)} />
+            <FactCard label="Gallery id" value={pet.id} />
           </FactGrid>
 
           <ActionRow>

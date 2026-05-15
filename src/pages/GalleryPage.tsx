@@ -2,30 +2,18 @@ import { LoaderCircle } from "lucide-react";
 import { Button } from "../components/Button";
 import { EmptyState } from "../components/EmptyState";
 import { GalleryControls } from "../components/GalleryControls";
-import { PetCard } from "../components/PetCard";
+import { PageIntro } from "../components/PageIntro";
+import { PetGrid } from "../components/PetGrid";
 import { SelectionSummary } from "../components/SelectionSummary";
 import { usePetCollection } from "../hooks/usePetCollection";
 import { usePets } from "../hooks/usePets";
 import { useSelection } from "../state/SelectionContext";
-import {
-  Centered,
-  Grid,
-  Hero,
-  HeroText,
-  LoadMore,
-  ResultLine,
-} from "./GalleryPage.styles";
+import { Centered, Hero, LoadMore, ResultLine } from "./GalleryPage.styles";
 
 export function GalleryPage() {
   const { pets, loading, error, empty, refetch } = usePets();
   const collection = usePetCollection(pets);
-  const {
-    isSelected,
-    selectedCount,
-    toggleSelection,
-    selectMany,
-    clearSelection,
-  } = useSelection();
+  const { selectedCount, selectMany, clearSelection } = useSelection();
 
   if (loading) {
     return (
@@ -59,14 +47,11 @@ export function GalleryPage() {
   return (
     <>
       <Hero>
-        <HeroText>
-          <span>Interactive pet library</span>
-          <h1>Choose the companions worth downloading.</h1>
-          <p>
-            Browse, search, sort, select, and keep your picks while moving
-            through detail pages.
-          </p>
-        </HeroText>
+        <PageIntro
+          eyebrow="Interactive pet library"
+          title="Choose the companions worth downloading."
+          description="Browse, search, sort, select, and keep your picks while moving through detail pages."
+        />
       </Hero>
       <SelectionSummary />
 
@@ -93,16 +78,7 @@ export function GalleryPage() {
         />
       ) : (
         <>
-          <Grid>
-            {collection.visiblePets.map((pet) => (
-              <PetCard
-                key={pet.id}
-                pet={pet}
-                selected={isSelected(pet.id)}
-                onToggle={toggleSelection}
-              />
-            ))}
-          </Grid>
+          <PetGrid pets={collection.visiblePets} />
 
           <LoadMore>
             {collection.hasMore ? (

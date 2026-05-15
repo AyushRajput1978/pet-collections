@@ -4,60 +4,10 @@ export const Hero = styled.section`
   margin-bottom: 1rem;
 `;
 
-export const HeroText = styled.div`
-  span {
-    color: var(--teal);
-    font-size: 0.78rem;
-    font-weight: 900;
-    letter-spacing: 0;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-    line-height: 0.95;
-    margin: 0.55rem 0;
-    @media (min-width: 760px) {
-      font-size: 3.4rem;
-    }
-
-    @media (min-width: 1080px) {
-      font-size: 4.2rem;
-    }
-  }
-
-  p {
-    color: var(--muted);
-    font-size: 1.05rem;
-    line-height: 1.6;
-    margin: 0;
-    max-width: 560px;
-  }
-`;
-
 export const ResultLine = styled.p`
   color: var(--muted);
   font-weight: 700;
   margin: 0 0 0.8rem;
-`;
-
-export const Grid = styled.section`
-  display: grid;
-  gap: 1.35rem;
-  grid-template-columns: 1fr;
-
-  @media (min-width: 650px) {
-    gap: 1.5rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  @media (min-width: 1040px) {
-    gap: 1.65rem;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  @media (min-width: 1290px) {
-    gap: 1.65rem;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
 `;
 
 export const LoadMore = styled.div`

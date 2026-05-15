@@ -17,6 +17,7 @@ A React + TypeScript image gallery assignment that fetches pet data from `GET /p
 - Responsive gallery: 1 column mobile, 2 columns tablet, 4 columns desktop.
 - UI built with `styled-components`.
 - Component and page styles live in separate `*.styles.ts` modules and are imported into their matching components.
+- Shared UI pieces such as `PetGrid`, `PageIntro`, `DetailPhoto`, and `FactCard` keep repeated page patterns reusable.
 
 ## Run
 

@@ -26,41 +26,6 @@ export const DetailGrid = styled.div`
   }
 `;
 
-export const PhotoPanel = styled.div`
-  background: #e4e0d6;
-  border-radius: 8px;
-  height: clamp(22rem, 60vh, 34rem);
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-
-  img {
-    display: block;
-    height: 100%;
-    inset: 0;
-    position: absolute;
-    width: 100%;
-  }
-
-  img:first-child {
-    filter: blur(22px);
-    object-fit: cover;
-    opacity: 0.42;
-    transform: scale(1.08);
-  }
-
-  img:last-child {
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    z-index: 1;
-  }
-
-  @media (max-width: 880px) {
-    height: clamp(18rem, 58vw, 28rem);
-  }
-`;
-
 export const Profile = styled.article`
   align-content: center;
   background: var(--paper);
@@ -118,28 +83,6 @@ export const FactGrid = styled.div`
 
   @media (max-width: 520px) {
     grid-template-columns: 1fr;
-  }
-`;
-
-export const Fact = styled.div`
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 0.8rem;
-
-  span,
-  strong {
-    display: block;
-  }
-
-  span {
-    color: var(--muted);
-    font-size: 0.76rem;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
-
-  strong {
-    margin-top: 0.2rem;
   }
 `;
 
