@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 export const Header = styled.header`
   background: rgba(255, 253, 248, 0.92);
@@ -51,13 +51,13 @@ export const BrandMark = styled.span`
   align-items: center;
   background: var(--teal);
   border-radius: 8px;
-  color: #fff;
-  display: inline-flex;
-  flex: 0 0 2.35rem;
-  font-size: 0.83rem;
+  color: #fff !important;
+  display: inline-flex !important;
+  flex: 0 0 2.35rem !important;
+  font-size: 0.83rem !important;
   font-weight: 900;
   height: 2.35rem;
-  justify-content: center;
+  justify-content: center !important;
 `;
 
 export const Nav = styled.nav`

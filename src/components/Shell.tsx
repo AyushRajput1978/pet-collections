@@ -1,7 +1,7 @@
-import { Download, Heart, Images, Info } from 'lucide-react';
-import type { ReactNode } from 'react';
-import { useSelection } from '../state/SelectionContext';
-import { formatBytes } from '../utils/formatters';
+import { Download, Heart, Images, Info } from "lucide-react";
+import type { ReactNode } from "react";
+import { useSelection } from "../state/SelectionContext";
+import { formatBytes } from "../utils/formatters";
 import {
   Brand,
   BrandMark,
@@ -11,7 +11,7 @@ import {
   Nav,
   NavItem,
   SelectionBadge,
-} from './Shell.styles';
+} from "./Shell.styles";
 
 export function Shell({ children }: { children: ReactNode }) {
   const { selectedCount, totalFileSize } = useSelection();
@@ -20,13 +20,15 @@ export function Shell({ children }: { children: ReactNode }) {
     <>
       <Header>
         <HeaderInner>
-          <Brand to="/" aria-label="Pet Picks home">
-            <BrandMark>PP</BrandMark>
-            <div>
-              <strong>Pet Picks</strong>
-              <span>Curated companion gallery</span>
-            </div>
-          </Brand>
+          <div>
+            <Brand to="/" aria-label="Pet Picks home">
+              <BrandMark>PP</BrandMark>
+              <div>
+                <strong>Pet Picks</strong>
+                <span>Curated companion gallery</span>
+              </div>
+            </Brand>
+          </div>
 
           <Nav>
             <NavItem to="/">
@@ -43,7 +45,10 @@ export function Shell({ children }: { children: ReactNode }) {
             </NavItem>
           </Nav>
 
-          <SelectionBadge to="/selection" aria-label={`${selectedCount} selected pets`}>
+          <SelectionBadge
+            to="/selection"
+            aria-label={`${selectedCount} selected pets`}
+          >
             <Download size={17} />
             <span>{selectedCount}</span>
             <small>{formatBytes(totalFileSize)}</small>

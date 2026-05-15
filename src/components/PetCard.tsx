@@ -1,16 +1,18 @@
-import { Check, Download, Eye, Plus } from 'lucide-react';
-import type { Pet } from '../types';
-import { formatBytes, formatDate } from '../utils/formatters';
+import { Download, Eye, Plus, X } from "lucide-react";
+import type { Pet } from "../types";
+import { downloadPets } from "../utils/download";
+import { formatBytes, formatDate } from "../utils/formatters";
 import {
-  ActionAnchor,
-  ActionLink,
-  Actions,
+  ActionRow,
+  DownloadButton,
   Card,
-  CardBody,
+  Content,
   ImageWrap,
   Meta,
+  ViewButton,
   SelectButton,
-} from './PetCard.styles';
+} from "./PetCard.styles";
+import { Link } from "react-router-dom";
 
 type PetCardProps = {
   pet: Pet;
@@ -23,35 +25,45 @@ export function PetCard({ pet, selected, onToggle }: PetCardProps) {
     <Card $selected={selected}>
       <ImageWrap>
         <img src={pet.imageUrl} alt={pet.title} loading="lazy" />
-        <SelectButton
-          type="button"
-          aria-pressed={selected}
-          aria-label={selected ? `Remove ${pet.title} from selection` : `Select ${pet.title}`}
-          onClick={() => onToggle(pet)}
-        >
-          {selected ? <Check size={18} /> : <Plus size={18} />}
-        </SelectButton>
       </ImageWrap>
 
-      <CardBody>
+      <SelectButton
+        type="button"
+        aria-pressed={selected}
+        aria-label={
+          selected
+            ? `Remove ${pet.title} from selection`
+            : `Select ${pet.title}`
+        }
+        onClick={() => onToggle(pet)}
+      >
+        {selected ? <X size={17} /> : <Plus size={17} />}
+      </SelectButton>
+
+      <Content>
+        <h2>{pet.title}</h2>
+        <p>{pet.description}</p>
+
         <Meta>
           <span>{formatDate(pet.createdAt)}</span>
           <span>{formatBytes(pet.fileSize)}</span>
+          <a href={pet.imageUrl}>
+            <Eye size={25} />
+          </a>
         </Meta>
-        <h2>{pet.title}</h2>
-        <p>{pet.description}</p>
-      </CardBody>
 
-      <Actions>
-        <ActionLink to={`/pets/${pet.id}`}>
-          <Eye size={17} />
-          View
-        </ActionLink>
-        <ActionAnchor href={pet.imageUrl} download>
-          <Download size={17} />
-          Image
-        </ActionAnchor>
-      </Actions>
+        <ActionRow>
+          <DownloadButton type="button" onClick={() => downloadPets([pet])}>
+            <Download size={15} />
+            Download
+          </DownloadButton>
+
+          <ViewButton to={`/pets/${pet.id}`}>
+            <Eye size={15} />
+            View Details
+          </ViewButton>
+        </ActionRow>
+      </Content>
     </Card>
   );
 }
