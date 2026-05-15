@@ -16,7 +16,7 @@ export const BackLink = styled(Link)`
 `;
 
 export const DetailGrid = styled.div`
-  align-items: stretch;
+  align-items: start;
   display: grid;
   gap: 1.2rem;
   grid-template-columns: minmax(0, 1.1fr) minmax(19rem, 0.9fr);
@@ -29,13 +29,35 @@ export const DetailGrid = styled.div`
 export const PhotoPanel = styled.div`
   background: #e4e0d6;
   border-radius: 8px;
-  min-height: 25rem;
+  height: clamp(22rem, 60vh, 34rem);
   overflow: hidden;
+  position: relative;
+  width: 100%;
 
   img {
+    display: block;
     height: 100%;
-    object-fit: cover;
+    inset: 0;
+    position: absolute;
     width: 100%;
+  }
+
+  img:first-child {
+    filter: blur(22px);
+    object-fit: cover;
+    opacity: 0.42;
+    transform: scale(1.08);
+  }
+
+  img:last-child {
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    z-index: 1;
+  }
+
+  @media (max-width: 880px) {
+    height: clamp(18rem, 58vw, 28rem);
   }
 `;
 
@@ -46,10 +68,15 @@ export const Profile = styled.article`
   border-radius: 8px;
   display: grid;
   gap: 1rem;
+  min-height: clamp(22rem, 60vh, 34rem);
   padding: 1.1rem;
 
   @media (min-width: 760px) {
     padding: 2rem;
+  }
+
+  @media (max-width: 880px) {
+    min-height: auto;
   }
 
   h1,

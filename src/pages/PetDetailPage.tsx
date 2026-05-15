@@ -64,6 +64,7 @@ export function PetDetailPage() {
 
       <DetailGrid>
         <PhotoPanel>
+          <img src={pet.imageUrl} alt="" aria-hidden="true" />
           <img src={pet.imageUrl} alt={pet.title} />
         </PhotoPanel>
 

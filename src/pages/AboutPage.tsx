@@ -1,16 +1,47 @@
-import { Github, Layers, Route, SearchCheck } from 'lucide-react';
-import { About, Feature, FeatureGrid, Intro } from './AboutPage.styles';
+import { Database, Download, Github, Layers, Route, SearchCheck, ShieldCheck } from 'lucide-react';
+import {
+  About,
+  Feature,
+  FeatureGrid,
+  Intro,
+  IntroCopy,
+  IntroPanel,
+  Metric,
+  MetricGrid,
+  Note,
+  Workflow,
+  WorkflowItem,
+} from './AboutPage.styles';
 
 export function AboutPage() {
   return (
     <About>
       <Intro>
-        <span>About this build</span>
-        <h1>A compact front-end assignment with production habits.</h1>
-        <p>
-          Pet Picks uses fetch, typed data guards, route-aware pages, persistent global
-          selection, responsive gallery pagination, and styled-components throughout.
-        </p>
+        <IntroCopy>
+          <span>About this build</span>
+          <h1>A polished pet gallery built for browsing, choosing, and downloading.</h1>
+          <p>
+            Pet Picks is a React and TypeScript take-home project with route-aware
+            browsing, persistent selection, searchable data, and responsive image cards.
+          </p>
+        </IntroCopy>
+
+        <IntroPanel>
+          <MetricGrid>
+            <Metric>
+              <strong>4</strong>
+              <span>gallery columns on desktop</span>
+            </Metric>
+            <Metric>
+              <strong>/pets</strong>
+              <span>fetch-powered data source</span>
+            </Metric>
+            <Metric>
+              <strong>100%</strong>
+              <span>selection state retained across routes</span>
+            </Metric>
+          </MetricGrid>
+        </IntroPanel>
       </Intro>
 
       <FeatureGrid>
@@ -34,7 +65,34 @@ export function AboutPage() {
           <h2>Reviewable code</h2>
           <p>Small hooks and components keep behavior isolated and easy to discuss.</p>
         </Feature>
+        <Feature>
+          <Download size={24} />
+          <h2>Download flow</h2>
+          <p>Selected pets can be downloaded together, with individual downloads too.</p>
+        </Feature>
+        <Feature>
+          <Database size={24} />
+          <h2>Typed data</h2>
+          <p>Pet records are normalized and guarded before they reach the interface.</p>
+        </Feature>
       </FeatureGrid>
+
+      <Workflow>
+        <WorkflowItem>
+          <ShieldCheck size={22} />
+          <div>
+            <h2>Built for the assignment brief</h2>
+            <p>
+              The implementation keeps the required tools visible: fetch, custom hooks,
+              React Router, persistent state, pagination, and styled-components.
+            </p>
+          </div>
+        </WorkflowItem>
+        <Note>
+          The UI is intentionally organized around the core workflow: scan the gallery,
+          open image details, select favorites, and download exactly what you need.
+        </Note>
+      </Workflow>
     </About>
   );
 }
